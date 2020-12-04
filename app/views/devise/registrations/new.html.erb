@@ -3,32 +3,32 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.name_field :name %>
+  <div class="form-group has-icon">
+    <label class="control-label sr-only" for="inputName">Name</label>
+      <%= f.name_field :name, autofocus: true, class:"form-control", id:"inputName", placeholder:"名前"%>
   </div>
 
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.address_field :address %>
+  <div class="form-group has-icon">
+    <label class="control-label sr-only" for="inputAddress_number">Address Number</label>
+      <%= f.address_number_field :address_number, class:"form-control", id:"inputAddressNumber", placeholder:"郵便番号"%>
+  </div>
+  
+  <div class="form-group has-icon">
+    <label class="control-label sr-only" for="inputAddress">Address</label>
+      <%= f.address_field :address, class:"form-control", id:"inputAddress", placeholder:"住所"%>
   </div>
 
-  <div class="field">
-    <%= f.label :address_number %><br>
-    <%= f.address_number_field :address_number %>
+  <div class="form-group has-icon">
+    <label class="control-label sr-only" for="inputPhoneNumber">Phone Number</label>
+      <%= f.phone_number_field :phone_number, class:"form-control", id:"inputPhoneNumber", placeholder:"電話番号"%>
   </div>
 
-  <div class="field">
-    <%= f.label :phone_number %><br>
-    <%= f.phone_number_field :phone_number %>
+  <div class="form-group has-icon">
+    <label class="control-label sr-only" for="inputEmail">Email</label>
+      <%= f.email_field :email, class:"form-control", id:"inputEmail", placeholder:"メールアドレス"%>
   </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
+  <div class="form-group has-icon">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -36,7 +36,7 @@
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
-  <div class="field">
+  <div class="form-group has-icon">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
