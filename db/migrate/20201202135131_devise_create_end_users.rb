@@ -32,11 +32,16 @@ class DeviseCreateEndUsers < ActiveRecord::Migration[5.2]
       # t.string   :unlock_token # Only if unlock strategy is :email or :both
       # t.datetime :locked_at
 
-      t.string :name
+      t.string :last_name
+      t.string :first_name
+      t.string :last_name_kana
+      t.string :first_name_kana
       t.string :address
-      t.integer :address_number
-      t.integer :phone_number
-      t.timestamps null: false
+      t.integer :postal_code
+      t.integer :telephone_number
+      t.boolean :is_active
+      t.timestamps null: false #created_at, update_at を自動で作成
+
     end
 
     add_index :end_users, :email,                unique: true

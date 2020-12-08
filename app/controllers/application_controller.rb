@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
 	protected
 
 	def configure_permitted_parameters
-		devise_parameter_sanitizer.permit(:sign_up, keys:[:name, :email, :address, :address_number, :phone_number])
+		devise_parameter_sanitizer.permit(:sign_up, keys:[:name]) #デフォルトでメールアドレスとパスワードを受け取るようになっている。
 	end
 end
