@@ -15,18 +15,23 @@
         <div class="navbar-header">
           <a class="navbar-brand" href="#">Nagano Cake</a>
         </div>
-        <ul class="nav navbar-nav">
-          <li><a href="#">About</a></li>
-        </ul>
+
+        <!--ログインユーザー名表示  -->
+        <!-- <% if end_user_signed_in? %> -->
+          <!-- <%= @end_user.first_name %> -->
+        <!-- <% end %> -->
+
         <ul class="nav navbar-nav navbar-right">
          <% if end_user_signed_in? %>
-          <li><a href="#"></span>ログイン</a></li>
-          <li><a href="#"></span>新規登録</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">商品一覧</a></li>
+          <li><a href="#">新規登録</a></li>
+          <li><a href="#">ログイン</a></li>
          <% else %>
-          <li><a href="#"></span>マイページ</a></li>
-          <li><a href="#"></span>商品一覧</a></li>
-          <li><a href="#"></span>カート</a></li>
-          <li><a href="#"></span>ログアウト</a></li>
+          <li><a href="#">マイページ</a></li>
+          <li><a href="#">商品一覧</a></li>
+          <li><a href="#">カート</a></li>
+          <li><a href="#">ログアウト</a></li>
          <% end %>
         </ul>
       </div>
