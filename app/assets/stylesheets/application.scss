@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+ /*追記箇所bootstrap読み込み用*/
+@import "bootstrap-sprockets";
+@import "bootstrap";

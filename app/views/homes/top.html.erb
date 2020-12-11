@@ -1,11 +1,17 @@
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-sm-4" style="background-color:lavender;">
-			<p>ジャンル検索</p>
-			<p>ケーキ</p>
-			<p>プリン</p>
-			<p>焼き菓子</p>
-			<p>キャンディ</p>
+			<div class="listings">
+              <div class="listings_channels">
+              	<h2 class="listnges_header">ジャンル検索</h2>
+              	<ul class="channel_list">
+              		<li>ケーキ</li>
+              		<li>プリン</li>
+              		<li>焼き菓子</li>
+              		<li>キャンディ</li>
+              	</ul>
+              </div>
+            </div>
 		</div>
 		<div class="col-sm-8" style="background-color:lavenderblush;">
 			<p>ようこそ、ながのCAKEへ！</p>
@@ -13,9 +19,12 @@
 			<p>会員でない方も商品の閲覧はできますが</p>
 			<p>購入には会員登録が必要になります。</p>
 			<h2>新着商品</h2>
-			
 		</div>
 	</div>
 </div>
 
 <!-- bootstarpのスパンで画面作成 -->
+              		<!-- <%= sidebar_link_item('ケーキ', admin_item_path) %> -->
+              		<!-- <%= sidebar_link_item('プリン', admin_item_path) %> -->
+              		<!-- <%= sidebar_link_item('焼き菓子', admin_item_path) %> -->
+              		<!-- <%= sidebar_link_item('キャンディ', admin_item_path) %> -->
