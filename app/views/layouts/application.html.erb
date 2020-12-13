@@ -23,15 +23,15 @@
 
         <ul class="nav navbar-nav navbar-right">
          <% if end_user_signed_in? %>
-          <li><a href="#">About</a></li>
-          <li><a href="#">商品一覧</a></li>
-          <li><a href="#">新規登録</a></li>
-          <li><a href="#">ログイン</a></li>
-         <% else %>
           <li><a href="#">マイページ</a></li>
           <li><a href="#">商品一覧</a></li>
           <li><a href="#">カート</a></li>
           <li><a href="#">ログアウト</a></li>
+         <% else %>
+          <li class=""><%= link_to 'About', about_path %></li>
+          <li><a href="#">商品一覧</a></li>
+          <li><a href="#">新規登録</a></li>
+          <li><a href="#">ログイン</a></li>
          <% end %>
         </ul>
       </div>
